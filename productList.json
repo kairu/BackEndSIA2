@@ -1,0 +1,68 @@
+{
+    "items":[
+        {
+            "name": "Floodlight Camera",
+            "imgName": "images/products/floodlight.jpg"
+        },
+        {
+            "name": "Smart Wireless Camera 1080",
+            "imgName":"images/products/smartwireless1080p.jpg"
+        },
+        {
+            "name": "Smart Wireless Camera",
+            "imgName":"images/products/smartwireless.jpg"
+        },
+        {
+            "name": "Smart Floodlight Camera",
+            "imgName":"images/products/smartfloodlight.jpg"
+        },
+        {
+            "name": "LEIU Fingerprint",
+            "imgName": "images/products/LEIUFingerprint.jpg"
+        },
+        {
+            "name": "Bluetooth Smart Lock",
+            "imgName":"images/products/BluetoothSmartLock.jpg"
+        },
+        {
+            "name": "Smart Doorbell",
+            "imgName":"images/products/SmartDoorbell.jpg"
+        },
+        {
+            "name": "Outdoor Wi-fi Camera",
+            "imgName":"images/products/OutdoorWifiSmartCamera.jpg"
+        },
+        {
+            "name": "Indoor Wi-fi Camera",
+            "imgName":"images/products/IndoorWifiCamera.jpg"
+        },
+        {
+            "name": "Smart Wireless 1080P Floodlight Camera",
+            "imgName":"images/products/SmartWireless1080pFloodlightCamera.jpg"
+        },
+        {
+            "name": "Z5 Outdoor IPC",
+            "imgName":"images/products/Z5Outdoor.jpg"
+        },
+        {
+            "name": "PoE NVR Kit",
+            "imgName":"images/products/PoENVRKits.jpg"
+        },
+        {
+            "name": "Smart Floodlight Camera",
+            "imgName":"images/products/SmartFloodlightCamera.jpg"
+        },
+        {
+            "name": "4CH 1080p Wireless Kit",
+            "imgName":"images/products/WirelessKit1080p4CH.jpg"
+        },
+        {
+            "name": "Smart Lock AT1",
+            "imgName":"images/products/SmartLockAT1.jpg"
+        },
+        {
+            "name": "Smart Lock R11",
+            "imgName":"images/products/SmartLockR11.jpg"
+        }
+    ]
+}

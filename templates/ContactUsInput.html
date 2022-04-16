@@ -1,0 +1,40 @@
+<form method="POST" id="clientform" autocomplete="off" enctype="multipart/form-data" name="ContactUs">
+	<div class="row justify-content-center my-offset">
+	<div class="col-lg-4 col-md-4 col-sm-12 text-left">
+			<div class="form-group bot-margin">
+				<input type="text" class="form-control contact-design" name="first_name" placeholder="First Name *" required/>
+			</div>
+			<div class="form-group bot-margin">
+				<input type="email" class="form-control contact-design" name="email" placeholder="Email *" required/>
+			</div>
+			<div class="form-group">
+				<select class="custom-select custom-select-sm contact-design" name="job_func" defaultValue={'DEFAULT'}> 
+					<option value="DEFAULT" disabled>What best describes your job function?*</option>
+					<option value="BO">Business Owner</option>
+					<option value="FO">Financial Owner</option>
+					<option value="ITM">IT Manager</option>
+					<option value="OL">Operations Leader</option>
+					<option value="Etc">Other job function</option>
+				</select> 
+			</div>
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-12 text-left">
+		<div class="form-group bot-margin">
+			<input type="text" class="form-control contact-design" name="last_name" placeholder="Last Name *" required/>
+		</div>
+		<div class="form-group bot-margin">
+			<input type="tel" class="form-control contact-design" name="contact" placeholder="Phone Number *" required/>
+		</div>
+		<div class="form-group bot-margin">
+			<input type="file" name="image" class="form-control"/>
+		</div>
+	</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-lg-8 col-md-8 col-sm-10 text-left">
+			<p class="mini-text-attrib text-white">Message:</p>
+			<textarea class="form-control contact-design" name="message" rows="5"></textarea>
+			<input type="submit" class="btn btn-secondary btn-lg active product-margin" aria-pressed="true" value="Submit" name="submit" id="submit"/>
+		</div>
+	</div>
+</form>

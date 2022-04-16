@@ -1,0 +1,156 @@
+<script>
+	$(document).ready(function() {
+		
+		$.ajax({
+				url: "{{ url_for('static', filename='images/Services/customerSupport/customerSupportHeadset.html') }}",
+				success: function(result){
+					$("#customerSupportHeadset").html(result);
+				}
+		});
+		
+		$.ajax({
+				url: "{{ url_for('static', filename='images/Services/customerSupport/onSiteITSupport.html') }}",
+				success: function(result){
+					$("#OSITS").html(result);
+				}
+		});
+		
+		$.ajax({
+				url: "{{ url_for('static', filename='images/Services/customerSupport/ITSupport.html') }}",
+				success: function(result){
+					$("#ITSupp").html(result);
+				}
+		});
+		
+		$.get("{{ url_for('static', filename='images/Services/IDBM/IDMBGFront.html') }}", '', function (data) { $("#IDBMBG").append(data); });
+		$.get("{{ url_for('static', filename='images/Services/IDBM/IDMBGSide.html') }}", '', function (data) { $("#IDBMBG").append(data); });
+		$.get("{{ url_for('static', filename='images/Services/IDBM/IDMBGBottom.html') }}", '', function (data) { $("#IDBMBG").append(data); });
+});
+</script>
+<div class="container-fluid product-margin">
+	<div class="row text-center justify-content-center">
+		<div class="col-10">
+			<img class="services-front" src="https://media-public.canva.com/eKkMM/MAENAheKkMM/1/s3.jpg"/>
+		</div>
+	</div>
+	<div class="row product-margin">
+		<div class="offset-lg-2 offset-md-2 col-lg-6 col-md-6 col-sm-12">
+			<div id="IDBMBG">
+			</div>
+			<h3 class="feature-title IDMBG-text text-dark customer-sup">Customer Support</h3>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-12">
+			<div id="customerSupportHeadset">
+			</div>
+		</div>
+		<img class="position-absolute bg-scale" src="https://media-public.canva.com/MAAWVEL4d9Q/1/screen.svg"/>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-lg-8 col-md-8 col-sm-12">
+			<p class="mini-text-attrib text-white IDMBG-indent">
+				Our certified technicians provide first-class support. Through understanding our customers’ needs,
+				we strive to exceed expectations by solving issues quickly and delivering simple solutions to complex
+				problems.
+			</p>
+			<p class="mini-text-attrib text-white IDMBG-indent product-margin">
+				You can rest assured that with our IT Support service your business challenges are solved by 
+				ITIL-aligned processes and industry-leading best practice, giving you the peace of mind that your 
+				business’ IT Support is in the best hands.
+			</p>
+			<p class="mini-text-attrib text-white IDMBG-indent product-margin">
+				We are so confident that you’ll love our service that we won’t lock you into any long-term contracts. 
+				Why? For the simple fact that we prefer our customers to stay with us because they want to, not because 
+				they’re contractually obliged to.
+			</p>
+		</div>
+	</div>
+	<div class="row justify-content-center my-offset text-center"?>
+		<div class="col-6">
+			<h3 class="meet-team text-white">IT Support Options</h3>
+		</div>
+	</div>
+	<div class="row justify-content-center whitespace text-center">
+		<div class="col-lg-2 col-md-2 col-sm-12">
+			<div id="OSITS">
+			</div>
+			<p class="mini-text-attrib product-margin text-white text-uppercase">ON-SITE IT SUPPORT</p>
+			<p class="mini-text-attrib product-margin text-secondary">
+				Remote support is fast and convenient when resolving most of your business’ complex problems, 
+				however sometimes an onsite visit is the only option.
+			</p>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-12">
+			<img class="network-security" src="https://media-public.canva.com/MADpusfpe_w/1/screen.svg"/>
+			<p class="mini-text-attrib product-margin text-white text-uppercase">PAY AS YOU GO</p>
+			<p class="mini-text-attrib product-margin text-secondary">
+				We’re there when you need us most. We have extended service desk hours from 7am to 7pm during 
+				your workweek and options for 24-hour support if needed. The best bit? We’ll only charge you for 
+				support when you need it.
+			</p>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-12">
+			<div id="ITSupp">
+			</div>
+			<p class="mini-text-attrib product-margin text-white text-uppercase">24/7 IT SUPPORT</p>
+			<p class="mini-text-attrib product-margin text-secondary">
+				We don't like to wait, so neither should you. Our Philippine-based certified technicians are
+				available to help 24 hours a day, 7 days a week. This ensures that your business can have access
+				to expert support around the clock.
+			</p>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-12">
+			<img class="network-security" src="https://media-public.canva.com/d7IpU/MAEGnkd7IpU/1/s3.png"/>
+			<p class="mini-text-attrib product-margin text-white text-uppercase">NO LOCK-IN CONTRACTS</p>
+			<p class="mini-text-attrib problems text-secondary">
+				We're so confident you'll appreciate our service that we've removed any and all obligations. 
+				If you love our service, we'd love you to stick around.
+			</p>
+		</div>
+	</div>
+	<div class="row whitespace">
+		<div class="col-lg-2 col-md-2 col-sm-12">
+		</div>
+		<div class="col-lg-5 col-md-5 col-sm-12 text-left">
+			<p class="mini-text-attrib text-white">Why put your IT in our hands?</p>
+			<p class="mini-text-attrib font-weight-bold text-white">We're here when you need us</p> 
+			<p class="mini-text-attrib text-secondary">
+				Our Support teams are available from 7am to 7pm every business day, with the option for 24-hour 
+				and weekend support if needed. We can basically tailor our support hours to your very own business hours.
+			</p>
+			
+			<p class="mini-text-attrib font-weight-bold text-white">A proactive mindset</p> 
+			<p class="mini-text-attrib text-secondary">
+				We are always one step ahead of the game, testing and removing complexities before introducing 
+				anything to your organisation's environment.
+			</p>
+			
+			<p class="mini-text-attrib font-weight-bold text-white">No lock-in contracts</p> 
+			<p class="mini-text-attrib text-secondary">
+				We’re confident you’ll love our service, so we don’t lock you into any complex contracts. 
+				You can leave anytime. Though we’re quietly confident you won’t — just ask any of our long-term clients.
+			</p>
+			
+			<p class="mini-text-attrib font-weight-bold text-white">Specialists at your fingertips</p> 
+			<p class="mini-text-attrib text-secondary">
+				Your business’ data deserves the best protection. Our hiring process means that only the industry’s 
+				most skilled technicians have access to your environment.
+			</p>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-12">
+		</div>
+	</div>
+	<div class="row justify-content-center whitespace text-center">
+		<div class="col-lg-6 col-md-6 col-sm-12">
+			<h3 class="meet-team text-secondary">Ready to talk?</h3>
+			<a href="#ContactInput" class="meet-team btn btn-light btn-lg active big-btn-service" role="button" aria-pressed="true">Contact Us</a>
+		</div>
+	</div>
+	<div class="row justify-content-center my-offset">
+		<div class="col-lg-8 col-md-8 col-sm-12 text-center">
+			<h3 class="meet-team text-white">Ready to future-proof your business?</h3>
+			<p class="mini-text-attrib text-white">Fill in the form below to request a quote.</p>
+		</div>
+	</div>
+	<div id="ContactInput">
+	</div>
+</div>

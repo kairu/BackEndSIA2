@@ -1,0 +1,158 @@
+<script>
+	$(document).ready(function() {
+		$.ajax({
+				url: "{{ url_for('static', filename='images/products/TwowayAudio.html') }}",
+				success: function(result){
+					$("#TwowayAudio").html(result);
+				}
+		});
+		
+		$.ajax({
+				url: "{{ url_for('static', filename='images/products/NightVisionSupport.html') }}",
+				success: function(result){
+					$("#NightVisionSupport").html(result);
+				}
+		});
+		
+		$.ajax({
+				url: "{{ url_for('static', filename='images/products/MotionDetection.html') }}",
+				success: function(result){
+					$("#MotionDetection").html(result);
+				}
+		});
+		
+		$.ajax({
+				url: "{{ url_for('static', filename='images/products/RemoteMonitoring.html') }}",
+				success: function(result){
+					$("#RemoteMonitoring").html(result);
+				}
+		});
+		
+		$.ajax({
+				url: "{{ url_for('static', filename='images/products/AlexaGoogleAssist.html') }}",
+				success: function(result){
+					$("#AlexaGoogleAssist").html(result);
+				}
+		});
+		
+		$.ajax({
+				url: "{{ url_for('static', filename='images/products/FaceRecog.html') }}",
+				success: function(result){
+					$("#FaceRecog").html(result);
+				}
+		});
+		
+		$.ajax({
+				url: "{{ url_for('static', filename='images/products/VerticalLine.html') }}",
+				success: function(result){
+					$(".VerticalLine").html(result);
+				}
+		});
+		
+	});
+</script>
+<div class="container-fluid text-center">
+				<h2 class="feature-title text-secondary product-font">Eagle, Inc.</h2>
+				<br/>
+				<br/>
+				<h2 class="feature-title text-white product-font">Smart Camera, Smart Security</h2>
+				<img class="ourProducts-CCTV" src="{{ url_for('static', filename='images/cctv.webp') }}"/>
+			</div>
+			<div class="row container-fluid justify-content-center text-secondary text-center whitespace">
+				<div class="col-lg-3 col-md-3 col-sm-12 align-self-center">
+					<div id="TwowayAudio">
+					</div>
+					<div class="mini-text-attrib product-font">
+						Two-way audio
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-12 align-self-center">
+					<div id="NightVisionSupport">
+					</div>
+					<div class="mini-text-attrib product-font">
+						Night vision support
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12 align-self-center">
+					<div id="MotionDetection">
+					</div>
+					<div class="mini-text-attrib product-font">
+						All motion detection
+					</div>
+				</div>
+			</div>
+			<div class="row container-fluid justify-content-center text-secondary text-center product-margin">
+				<div class="col-lg-3 col-md-3 col-sm-12 align-self-center">
+					<div id="RemoteMonitoring">
+					</div>
+					<div class="mini-text-attrib product-font">
+						Real-time remote monitoring
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-12 align-self-center">
+					<div id="AlexaGoogleAssist">
+					</div>
+					<div class="mini-text-attrib product-font">
+						Amazon Alexa & Google Assistant compatible
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12 align-self-center">
+					<div id="FaceRecog">
+					</div>
+					<div class="mini-text-attrib product-font">
+					Face Recognition
+					</div>
+				</div>
+			</div>
+			<div class="row container-fluid justify-content-center text-dark">
+				<div class="col-lg-5 col-md-2 col-sm-12 product-margin">
+					<div class="Oval">
+						<a href="#ProductItems" class="nav-item nav-link text-dark shop-nowBtn">Shop Now</a>
+					</div>
+				</div>
+			</div>
+			<div class="row container-fluid justify-content-center text-dark whitespace text-center">
+				<div class="col-lg-1 col-md-1 col-sm-12 d-none d-lg-block d-print-block">
+					<div class="VerticalLine">
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12 text-secondary">
+					<h2 class="who-lbl product-font">Who We Are</h2>
+					<div class="mini-text-attrib text-secondary">
+						Eagle, Inc. offers a well-curated range of cybersecurity items for all businesses.
+					</div>
+					<div class="mini-text-attrib text-secondary">
+						<br/>We aim to provide a quality product for all our customers.
+					</div>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-12 d-none d-lg-block d-print-block">
+					<div class="VerticalLine">
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12">
+					<img src="{{ url_for('static', filename='images/LogoEx.png') }}"/>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-12 d-none d-lg-block d-print-block">
+					<div class="VerticalLine">
+					</div>
+				</div>
+			</div>
+			<div class="text-secondary  text-center" name="ProductItems">
+					<h2 class="feature-title product-font">Best-sellers from our top-tier suppliers</h2>
+			</div>
+			{% for i in data['items'] %}
+				{% if loop.index0 % 4 == 0%}
+					<div class="row container-fluid justify-content-center product-margin text-center">
+				{% endif %}
+					<div class="col-lg-2 col-md-6 col-sm-12 product-margin">
+						<img src="{{ url_for('static', filename=i['imgName'])}}"/>
+						<button type="button" class="btn btn-light">Add to Cart</button>
+					</div>
+				{% if loop.index0 + 1 % 4 == 0%}
+					</div>
+				{% endif %}
+			{% endfor%}
+			<div class="container-fluid text-secondary justify-content-center product-margin text-center product-font">
+				<h2 class="feature-title">Ready to shop?</h2>
+				<a href="#ContactUs" class="nav-item nav-link text-white feature-title">Contact Us</a>
+			</div>

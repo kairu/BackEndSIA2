@@ -1,0 +1,155 @@
+<script>
+	$(document).ready(function(){
+		$.ajax({
+				url: "{{ url_for('static', filename='images/Eagle.html') }}",
+				success: function(result){
+					$("#Eagle").html(result);
+				}
+		});
+	});
+</script>
+<div class="container-fluid product-margin">
+			<div class="row justify-content-center">
+				<div class="col-lg-5 col-md-5 col-sm-12 offset-lg-2 offset-md-2">
+					<h3 class="text-white feature-title">A little about us</h3>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12">
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="offset-lg-1 offset-md-1 col-lg-3 col-md-3 col-sm-12">
+					<img src="{{ url_for('static', filename='images/aboutCompany/founder.webp') }}" class="about-company-img"/>
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-12">
+					<p class="text-white mini-text-attrib">Founded in 2021, Eagles, Inc is a leading IT services firm, 
+						with customers in the private and government sectors from some of Philippines' largest brands 
+						and household names.  Our services from start to finish are provided and executed 100% locally by 
+						our professional, experienced and qualified team. We have constantly evolved with these shifts, 
+						utilizing our experience and expertise to provide the highest quality service to our valuable customers. 
+						We pride ourselves on our high level of professionalism and integrity in every aspect of our services. 
+						Our ultimate goal is to create a company that is solely built on trust and honesty, 
+						understanding the IT needs of our clients.
+						<br/>
+						<br/>
+						The Executive Director, Mr. Kevin Dykes De Vera Aguila, 
+						realized there was a better way to provide ICT solutions that could allow him 
+						to ''Do More for Less'' in the process. Better yet, it involved improving uptime while reducing 
+						the costs. Since he founded Eagles, Inc. in 2021, Kevin has been its Director responsible 
+						for its overall strategic direction, its consulting services and its business development
+					</p>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1">
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div id="Eagle" class="company-eagle position-absolute">
+				</div>
+				<div class="offset-lg-2 offset-md-2 col-lg-4 col-md-4 col-sm-12">
+					<h3 class="text-white feature-title my-offset">Our Core Values</h3>
+					<p class="mini-text-attrib text-white my-offset font-weight-bold">Integrity</p>
+					<br/>
+					<p class="mini-text-attrib text-secondary">
+						Regardless of whether we're inside or outside the workplace,
+						we show integrity in everything we do.
+					</p>
+					<p class="mini-text-attrib text-white my-offset font-weight-bold">Respect</p>
+					<br/>
+					<p class="mini-text-attrib text-secondary">
+						We listen attentively, speak candidly, treat others
+						with courtesy, kindness, and ultimately how we
+						would like to be treated.
+					</p>
+					<p class="mini-text-attrib text-white my-offset font-weight-bold">Commitment</p>
+					<br/>
+					<p class="mini-text-attrib text-secondary">
+						We make each one of our customers feel
+						important and valued.
+					</p>
+					
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12">
+					<div class="my-offset core-values">
+					</div>
+					<br/>
+					<p class="mini-text-attrib text-white my-offset font-weight-bold">Innovation</p>
+					<br/>
+					<p class="mini-text-attrib text-secondary">
+						We create solutions that help make our customers’ jobs easier.
+					</p>
+					<p class="mini-text-attrib text-white my-offset font-weight-bold">Teamwork</p>
+					<br/>
+					<p class="mini-text-attrib text-secondary">
+						Our approach is always ‘less me and more 
+						we’. We act on behalf of the entire company, 
+						beyond just your own team.
+					</p>
+					<p class="mini-text-attrib text-white my-offset font-weight-bold">Sustainability</p>
+					<br/>
+					<p class="mini-text-attrib text-secondary">
+						We never sacrifice long-term value for short-term results.
+					</p>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-12">
+				</div>
+			</div>
+			<div class="row justify-content-center product-margin text-center">
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<a href="/team/" class="btn btn-secondary btn-lg font-weight-bold text-dark mini-text-attrib active links big-btn-service" role="button" aria-pressed="true">Meet Our Team</a>
+				</div>
+			</div>
+			<div class="row justify-content-center my-offset">
+				<div class="col-lg-7 col-md-7 col-sm-12">
+					<h3 class="feature-title text-white text-center">What We Do</h3>
+					<p class="mini-text-attrib text-secondary text-center">
+						Growth, service and change is at the heart of what we deliver. 
+						We listen and get an understanding of your business, your pain 
+						points and your vision to create a clearer, flexible and safer 
+						environment empowering your business to thrive.
+						<br/>
+						Our key areas of expertise include:
+					</p>
+				</div>
+			</div>
+			<div class="row justify-content-center product-margin text-center">
+				<div class="col-lg-2 col-md-2 col-sm-12">
+					<img src="{{ url_for('static', filename='images/DatabaseManagement.jpg') }}" class="product-img">
+					<br/>
+					<br/>
+					<p class="text-white mini-text-attrib">Database Management</p>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-12">
+					<img src="{{ url_for('static', filename='images/NetworkSecurity.jpg') }}" class="product-img">
+					<br/>
+					<br/>
+					<p class="text-white mini-text-attrib">Network Security</p>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-12">
+					<img src="{{ url_for('static', filename='images/DataStorage.jpg') }}" class="product-img">
+					<br/>
+					<br/>
+					<p class="text-white mini-text-attrib">Data Storage</p>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-12">
+					<img src="{{ url_for('static', filename='images/CustomerSupport.jpg') }}" class="product-img">
+					<br/>
+					<br/>
+					<p class="text-white mini-text-attrib">Customer Support</p>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-12">
+					<img src="{{ url_for('static', filename='images/NetworkSetup.png') }}" class="product-img">
+					<br/>
+					<br/>
+					<p class="text-white mini-text-attrib">Network Setup</p>
+				</div>
+			</div>
+			<div class="row justify-content-center text-center product-margin">
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<a href="/services/" class="btn btn-secondary btn-lg font-weight-bold text-dark mini-text-attrib active links big-btn-service" role="button" aria-pressed="true">View Services</a>
+				</div>
+			</div>
+			<div class="row justify-content-center text-center product-margin">
+				<div class="col-lg-8 col-md-8 col-sm-12">
+					<p class="text-white mini-text-attrib">Ready to get started?</p>
+				</div>
+			</div>
+		</div>

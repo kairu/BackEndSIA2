@@ -1,0 +1,215 @@
+<script>
+	$(document).ready(function(){
+		$.ajax({
+				url: "{{ url_for('static', filename='images/Circles.html') }}",
+				success: function(result){
+					$("#circles").html(result);
+				}
+		});
+		
+		$.ajax({
+				url: "{{ url_for('static', filename='images/Eagle.html') }}",
+				success: function(result){
+					$("#Eagle").html(result);
+				}
+		});
+		
+		$.ajax({
+				url: "{{ url_for('static', filename='images/Support247.html') }}",
+				success: function(result){
+					$("#Support247").html(result);
+				}
+		});
+		
+		$.ajax({
+				url: "{{ url_for('static', filename='images/AgileTeam.html') }}",
+				success: function(result){
+					$("#AgileTeam").html(result);
+				}
+		});
+		
+		$.ajax({
+				url: "{{ url_for('static', filename='images/IntegratedConn.html') }}",
+				success: function(result){
+					$("#IntegratedConn").html(result);
+				}
+		});
+	});
+</script>
+<div className="features">
+			<div class="row justify-content-around">
+				<div class="col-lg-6 col-md-6 col-sm-12 text-center text-md-left p-2">
+				  <h3 class="feature-title text-white">IT will work for your business</h3>
+				  <p class="mini-text-attrib text-white">Let's Implement and Manage technology</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12 my-text-right text-center text-md-left p-2">
+					<div id="circles">
+					</div>
+				  <h3 class="feature-title text-white">Power your business with Eagle, Inc.</h3>
+				  <p class="mini-text-attrib text-white">Keep your business performing at its best with IT solutions personalized for your needs.
+				  From small networks to complex, we offer broad-spectrum services to help your business thrive.</p>
+				  <br/>
+				  <a href="/services/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Learn More ></a>
+				</div>
+			</div>
+			<div class="row container my-img-align" id="Offices">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<h3 class="feature-title text-white">Three main offices</h3>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-12 text-white">
+					<img class="my-branch rounded" src="./static/images/BaguioBranch.jpg"/>
+					Eagle, Inc started in Baguio City in the year 2021
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-12 text-white">
+					<img class="my-branch rounded" src="./static/images/QuezonBranch.jpg"/>
+					Eagle, Inc first branch in Quezon City
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-12 text-white">
+					<img class="my-branch rounded" src="./static/images/CebuBranch.jpg"/>
+					Extending all the way to Cebu City in 2026
+				</div>
+			</div>
+		</div>
+		<div class="features whitespace container-fluid">
+			<div class="row justify-content-end">
+				<div class="col-lg-2 col-md-12 col-sm-12 text-center">
+					<h3 class="feature-title text-white">Our<br/>Services</h3><br/><br/>
+					<div>
+						<img src="./static/images/OurServices.jpg" class="my-service"/>
+					</div>
+				</div>
+				<div class="col-lg-1 col-md-2 col-sm-2 align-self-center d-none d-lg-block d-print-block">
+					<div>
+						<h1 class="feature-title my-number-margin">01</h1>
+					</div>
+					<div>
+						<h1 class="feature-title my-number-margin">02</h1>
+					</div>
+					<div>
+						<h1 class="feature-title my-number-margin">03</h1>
+					</div>
+				</div>
+				<div class="col-lg-4  col-md-10 col-sm-10 align-self-center">
+					<a class="nav-item nav-link text-white feature-title" href="/services/IDBM/">Database Management</a>
+					<p class="mini-text-attrib text-white">We prepare your system for better user experience.</p>
+					<div>
+						<a class="nav-item nav-link text-white feature-title" href="/services/networksecurity/">Network Security</a>
+						<p class="mini-text-attrib text-white">We secure your network from rogue devices and cyberattacks.</p>
+					</div>
+					<div>
+						<a class="nav-item nav-link text-white feature-title" href="/services/datastorage/">Data Storage</a>
+						<p class="mini-text-attrib text-white">We keep your data safe and secured.</p>
+					</div>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-2 align-self-end d-none d-lg-block d-print-block">
+					<h1 class="feature-title my-number-margin2">04</h1>
+					<div>
+						<h1 class="feature-title my-number-margin2">05</h1>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-10 col-sm-10 align-self-end">
+					<a class="nav-item nav-link text-white feature-title" href="/services/customersupport/">Customer Support</a>
+					<p class="mini-text-attrib text-white">We're here when you need us</p>
+					<div>
+						<a class="nav-item nav-link text-white feature-title" href="/services/networksetup/">Network Setup</a>
+						<p class="mini-text-attrib text-white">We provide a scalable network solution.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="features whitespace">
+			<div class="row justify-content-around">
+				<div id="Eagle" class="position-absolute bg-scale" style="z-index: -1;">
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-12 text-center">
+					<div class="company-profile">
+						<div id="Support247">
+						</div>
+						<h4 class="feature-title text-secondary"> 24/7 Support</h4>
+						<p class="mini-text-attrib text-secondary">We have daily Support Team online 24/7, so just call us, chat us, if you wanna reach us!</p>
+					</div>
+					<div class="company-profile">
+						<div id="AgileTeam">
+						</div>
+						<h4 class="feature-title text-secondary"> Agile Team Dynamics</h4>
+						<p class="mini-text-attrib text-secondary">Our team is equipped with the y-gene, so we’re always evolving! </p>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-12 text-center my-offset">
+					<div class="company-profile">
+						<div id="IntegratedConn">
+						</div>
+						<h4 class="feature-title text-secondary"> Integrated Connectivity</h4>
+						<p class="mini-text-attrib text-secondary">Every code we make, every break we take, every meal we bake, every shimmy we shake, we’ll be updating you.</p>
+					</div>
+					<div class="company-profile">
+						<img src="https://media-public.canva.com/A_yEE/MADhHyA_yEE/3/s.svg" class="company-img img-fill"/>
+						<h4 class="feature-title text-secondary"> Supports Multiple Technologies</h4>
+						<p class="mini-text-attrib text-secondary">We’re like a department store for technologies that we can work with. You name it, we literally have it!</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-12 text-center">
+					<div class="d-none d-lg-block d-print-block">
+						<img class="company-img-laptop" src="https://media-public.canva.com/MADGxwOr8_c/4/screen_2x.jpg"/>
+					</div>
+					<div class="d-none d-md-block d-lg-none">
+						<img class="company-img-laptop" src="https://media-public.canva.com/MADGxwOr8_c/4/screen_2x.jpg"/>
+					</div>
+					<div class="d-none d-sm-block d-md-none">
+						<img class="company-img-laptop-small" src="https://media-public.canva.com/MADGxwOr8_c/4/screen_2x.jpg"/>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12 company-margin">
+					<h3 class="feature-title text-white">Company Profile</h3>
+					<p class="mini-text-attrib text-white">Established in 2021, Eagle, Inc is a full-service firm offering affordable network development solutions to individuals and local businesses nationwide.</p>
+					<a href="/about/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Learn More ></a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="features whitespace container-fluid">
+			<div class="row justify-content-around">
+				<div class="col-lg-5 col-md-5 col-sm-12 text-center">
+					<h3 class="feature-title text-white">Let's work together.</h3>
+					<div class="d-none d-lg-block d-print-block">
+						<img src="https://media-public.canva.com/MADQ48Vnzvg/1/screen_2x.jpg" class="contact-page"/>
+					</div>
+					<div class="d-none  d-md-block d-lg-none">
+						<img src="https://media-public.canva.com/MADQ48Vnzvg/1/screen_2x.jpg" class="contact-page"/>
+					</div>
+					<div class="d-none d-sm-block d-md-none">
+						<img src="https://media-public.canva.com/MADQ48Vnzvg/1/screen_2x.jpg" class="contact-page-small"/>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<h3 class="feature-title text-center text-white">Send us a Message</h3>
+					<p class="text-secondary mini-text-attrib">Want to learn more about our company and offerings?</p>
+					<div class="contact-page">
+						<p class="text-secondary mini-text-attrib">Mailing Address</p>
+						<p class="mini-text-attrib text-white">123 Baguio City, Philippines</p>
+					</div>
+					<div class="contact-page-cont">
+						<p class="text-secondary mini-text-attrib">Phone Number</p>
+						<p class="mini-text-attrib text-white">(123) 456-7890</p>
+					</div>
+					<div class="contact-page-cont">
+						<p class="text-secondary mini-text-attrib">Email Address</p>
+						<p class="mini-text-attrib text-white">eagle.aguila@gmail.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="features whitespace container-fluid">
+			<div class="row justify-content-center">
+				<div class="col-lg-10 col-md-10 col-sm-12 text-center">
+					<h3 class="feature-title text-white">Ready to future-proof your business?</h3>
+					<p class="mini-text-attrib text-white">Fill in the form below to request a quote.</p>
+				</div>
+			</div>
+			<div id="ContactInput">
+				{% block contact %}
+				{% endblock%}
+			</div>
+		</div>
