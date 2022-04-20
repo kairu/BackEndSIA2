@@ -2,12 +2,18 @@ from flask import Flask, redirect, request, url_for, render_template, session, g
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, EmailField
 from wtforms.validators import InputRequired, Email, EqualTo, Length
+import pymongo as pm
 import email_validator
 import json
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'SystemIntegration2'
 
+client = pm.MongoClient("mongodb+srv://test:test1234@demopy.8vbe5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+db = client.test
+col = db["user"] 
+
+app.config['MONGO_DBNAME'] = 'test'
 
 class registerForm(FlaskForm):
     username = StringField('Username', validators=[InputRequired(), Length(min=4, max=15)])
@@ -18,7 +24,7 @@ class registerForm(FlaskForm):
 
 class loginForm(FlaskForm):
     username = StringField('Username', validators=[InputRequired(), Length(min=4, max=15)])
-    password = PasswordField('Password', validators=[InputRequired(), Length(min=6, max=80)])
+    password = PasswordField('Password', validators=[InputRequired(), Length(min=4, max=80)])
     submit = SubmitField('Submit')
 
 def get_loginForm():
@@ -33,7 +39,35 @@ def get_regForm():
 
 @app.route("/login/", methods=['GET', 'POST'])
 def get_user():
-    return get_loginForm()._csrf_token
+    if request.method == 'POST' and get_loginForm().validate_on_submit():
+        username = get_loginForm().username.data
+        password = get_loginForm().password.data
+        qry = col.find_one({"username": username})
+        if qry['password'] == password:
+            session['username'] = username
+            session.pop('register', None)
+            return redirect(url_for('home'))
+        else:
+            return "Wrong password"
+
+@app.route("/logout/")
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('home'))
+
+@app.route("/regSubmit/" , methods=['GET', 'POST'])
+def regSubmit():
+    if request.method == 'POST' and get_regForm().validate_on_submit():
+        username = get_regForm().username.data
+        password = get_regForm().password.data
+        email = get_regForm().email.data
+        qry = col.find_one({"username": username})
+        if qry == None:
+            col.insert_one({"username": username, "password": password, "email": email})
+            session.pop('register', None)
+            return redirect(url_for('home'))
+        else:
+            return "Username already exists"
 
 def check_Session(content, data=None):
     if 'register' in session:
@@ -48,16 +82,11 @@ def check_Session(content, data=None):
         else:
             return render_template('index.html', mainContent=content+".html", loginForm=get_loginForm(), data=data)
 
-@app.route("/regSubmit/" , methods=['GET', 'POST'])
-def regSubmit():
-    if get_regForm().validate_on_submit:
-        return "This is a test that it has been submitted"
-
 @app.route("/register/")
 def register():
     if 'register' not in session:
         session['register'] = False
-    session['register'] = True if session['register'] == False else False
+    session['register'] = True if session['register'] == False or 'register' not in session else session.pop('register', None)
     return redirect(url_for('home'))
 
 @app.route("/")
@@ -116,6 +145,12 @@ def contact():
     template = check_Session('ContactUs')
     return template
 
-    
+@app.route("/test/", methods=['GET', 'POST'])
+def test():
+    if request.method == 'POST':
+        return "1"
+    else:
+        return "2"
+
 if __name__ == '__main__':
     app.run(debug=True)  # run our Flask app
